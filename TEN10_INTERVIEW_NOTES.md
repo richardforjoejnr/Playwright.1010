@@ -227,7 +227,7 @@ Inputs: Principal = 5000, Rate = 10%
 
 Expected: (5000 × 10) / (100 × 12) = 41.67
 
-Actual: 50.00
+Actual: 50.00 [Interest is 50 and total is 5050.00 ]
 
 The calculator seems to apply the yearly formula to monthly duration instead of dividing by 12.
 

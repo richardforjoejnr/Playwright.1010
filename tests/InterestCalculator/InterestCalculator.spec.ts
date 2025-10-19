@@ -176,16 +176,7 @@ test.describe('Interest Calculator - Decimal Rounding Tests', () => {
 
 test.describe('Interest Calculator - Field Validation Tests', () => {
 
-  test('Should require consent checkbox to be checked', async ({ calculatorPage }) => {
-    // Arrange
-    await calculatorPage.visit();
-    await calculatorPage.shouldBeLoaded();
-
-    // Assert
-    await calculatorPage.shouldRequireConsent();
-  });
-
-  test('Should not calculate without consent', async ({ calculatorPage }) => {
+  test('Should not calculate without consent checkbox checked', async ({ calculatorPage }) => {
     // Arrange
     const principal = 1000;
     const rate = '5%';
@@ -200,6 +191,8 @@ test.describe('Interest Calculator - Field Validation Tests', () => {
     await calculatorPage.selectDuration(duration);
 
     // Assert
+     await calculatorPage.shouldRequireConsent();
+    await calculatorPage.shouldShowAlertWhenCalculateClicked('Please accept the mandatory consent.');
     await calculatorPage.shouldHaveEmptyResults();
   });
 
