@@ -16,7 +16,6 @@ class BasePage {
   */
 
   async visit() {
-    console.log('Visiting page:', this.hash);
     await this.page.goto(this.hash);
   }
 
