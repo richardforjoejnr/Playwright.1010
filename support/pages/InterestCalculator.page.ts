@@ -16,6 +16,10 @@ class InterestCalculatorPage extends BasePage {
   #############
   */
 
+  get bodyLocator() {
+    return this.page.locator('body');
+  }
+
   get navbarBrand() {
     return this.page.locator('.navbar-brand');
   }
@@ -90,10 +94,10 @@ class InterestCalculatorPage extends BasePage {
    * @param rate The interest rate percentage (e.g., "5%")
    */
   async selectInterestRate(rate: string) {
-    await this.interestRateDropdownButton.click();
-    await this.interestRateOption(rate).check();
-    // Used to close the dropdown
-    await this.page.locator('body').click({ position: { x: 0, y: 0 } });
+  await this.interestRateDropdownButton.click();
+  await this.interestRateOption(rate).check();
+  // Used to close the dropdown
+  await this.bodyLocator.click({ position: { x: 0, y: 0 } });
   }
 
   /**
