@@ -37,7 +37,7 @@ test.describe('Login Tests', () => {
     await loginPage.shouldShowLoginErrorMessage('Invalid login attempt.');
   });
 
-  test('Login without entering credentials should show validation errors', async ({ loginPage }) => {
+  test('Login without entering any details should show validation errors', async ({ loginPage }) => {
     // Arrange
     await loginPage.visit();
     await loginPage.shouldBeLoaded();

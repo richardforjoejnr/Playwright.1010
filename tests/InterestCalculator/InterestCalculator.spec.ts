@@ -176,7 +176,7 @@ test.describe('Interest Calculator - Decimal Rounding Tests', () => {
 
 test.describe('Interest Calculator - Field Validation Tests', () => {
 
-  test('Should not calculate without consent checkbox checked', async ({ calculatorPage }) => {
+  test('Should not calculate with consent checkbox un-checked', async ({ calculatorPage }) => {
     // Arrange
     const principal = 1000;
     const rate = '5%';
@@ -196,7 +196,7 @@ test.describe('Interest Calculator - Field Validation Tests', () => {
     await calculatorPage.shouldHaveEmptyResults();
   });
 
-  test('Should display empty results before calculation', async ({ calculatorPage }) => {
+  test('Should display no results before calculation', async ({ calculatorPage }) => {
     // Arrange
     await calculatorPage.visit();
     await calculatorPage.shouldBeLoaded();
@@ -218,7 +218,7 @@ test.describe('Interest Calculator - Field Validation Tests', () => {
 
 test.describe('Interest Calculator - Error Message Tests', () => {
 
-  test('Should show alert when Calculate is clicked without selecting interest rate', async ({ calculatorPage }) => {
+  test('Should show alert when Calculating without selecting interest rate', async ({ calculatorPage }) => {
     // Arrange
     await calculatorPage.visit();
     await calculatorPage.shouldBeLoaded();
