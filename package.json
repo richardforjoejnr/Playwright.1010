@@ -1,0 +1,40 @@
+{
+  "name": "playwright.1010",
+  "version": "1.0.0",
+  "description": "Playwright 1010",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke --project=e2e-chromium",
+    "test:headed": "playwright test --headed",
+    "test:tag": "playwright test --grep \"@$TAG\" --project=chromium",
+    "codegen": "playwright codegen",
+    "report": "playwright show-report",
+    "lint": "eslint \"{config,support,tests}/**/*.ts\"",
+    "lint:fix": "eslint \"{config,support,tests}/**/*.ts\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardforjoesky/playwright.1010.git"
+  },
+  "keywords": [
+    "playwright",
+    "automation"
+  ],
+  "author": "Richard Forjoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardforjoesky/playwright.1010/issues"
+  },
+  "homepage": "https://github.com/richardforjoesky/playwright.1010#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.38.0"
+  }
+}
