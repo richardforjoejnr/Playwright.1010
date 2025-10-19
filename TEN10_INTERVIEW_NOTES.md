@@ -130,23 +130,7 @@ PASSWORD=your-secure-password
 
 ---
 
-## Test Strategy (2-Hour Plan)
-
-### Priority Test Cases
-
-#### MUST HAVE (Priority 1) - Core Functionality
-1. **Yearly calculation** - P=1000, R=5%, Duration=Yearly, with consent
-2. **Monthly calculation** - P=1000, R=10%, Duration=Monthly, with consent
-3. **Daily calculation** - P=1000, R=15%, Duration=Daily, with consent
-4. **Verify total = principal + interest** (all durations)
-5. **Verify 2 decimal place rounding** (e.g., 1000.567 → 1000.57)
-
-#### SHOULD HAVE (Priority 2) - Validation
-6. **Empty principal field** - verify error message displayed
-7. **No interest rate selected** - verify error message displayed
-8. **No duration selected** - verify error message displayed
-9. **Consent not checked** - verify error message displayed
-10. **All fields empty** - verify appropriate error messages
+## Test Strategy 
 
 #### Core areas
 - Basic Calculation Tests
@@ -158,37 +142,9 @@ PASSWORD=your-secure-password
 
 ---
 
-## Playwright Locator Quick Reference
-
-### Finding Elements
-```typescript
-// By role (BEST)
-page.getByRole('button', { name: 'Calculate' })
-page.getByRole('textbox', { name: 'Principal' })
-
-// By label
-page.getByLabel('Principal Amount')
-page.getByLabel('Interest Rate')
-
-// By test ID (if available)
-page.getByTestId('calculate-btn')
-
-// By CSS selector
-page.locator('#principal')
-page.locator('.interest-result')
-page.locator('input[name="principal"]')
-
-// By text
-page.getByText('Balance')
-page.getByText(/interest/i)  // Case insensitive
-```
-
-
----
-
 ## Interest Calculation Formulas
 
-Use chatGPT for function to calculate and check these
+Use chatGPT for the function to calculate and check these
 ---
 
 ### Test Approach
@@ -209,7 +165,6 @@ Use chatGPT for function to calculate and check these
 
 
 ## Notes
-During manual and automated testing, I encountered the following:
 
 - Using getByLabel for input and dropdown fields proved more reliable for some fields.
 
@@ -218,6 +173,7 @@ During manual and automated testing, I encountered the following:
 - The login page had its own route, but the calculator page loaded on the same root (/) after login. Thought it would have its own route
 
 ## BUGS
+During manual and automated testing, I encountered the following:
 
 1. Monthly Interest Calculation Bug
 
