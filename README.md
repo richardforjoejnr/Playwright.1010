@@ -131,41 +131,6 @@ View the latest test report:
 npm run report
 ```
 
-## Test Coverage
-
-### Login Tests (`tests/Login/Login.spec.ts`)
-- ✅ Successful login with valid credentials
-- ✅ Failed login with invalid credentials
-- ✅ Validation errors when submitting empty login form
-
-### Interest Calculator Tests (`tests/InterestCalculator/InterestCalculator.spec.ts`)
-
-#### Basic Calculation Tests
-- ✅ Calculate interest with Yearly duration
-- ✅ Calculate interest with Monthly duration
-- ✅ Calculate interest with Daily duration
-
-#### Different Interest Rates
-- ✅ Calculate with 1% interest rate (minimum)
-- ✅ Calculate with 7% interest rate
-- ✅ Calculate with 15% interest rate (maximum)
-
-#### Validation Tests
-- ✅ Consent checkbox has required attribute
-- ✅ Results remain empty when consent is not checked
-- ✅ Empty results displayed before calculation
-- ✅ Daily option selected by default
-
-#### Error Message Tests
-- ✅ Alert dialog when Calculate clicked without selecting interest rate
-- ✅ Alert dialog when mandatory fields are not selected
-
-#### Boundary Value Tests
-- ✅ Calculate with minimum principal amount (0)
-- ✅ Calculate with maximum principal amount (15,000)
-- ✅ Calculate with minimum interest rate (1%)
-
-
 ## Page Object Model
 
 The project follows the Page Object Model pattern with clear separation of concerns:
