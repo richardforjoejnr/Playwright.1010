@@ -104,9 +104,10 @@ Users must be able to select one of these duration options
 
 ### BEFORE Starting the 2-Hour Timer
 
-- [ ] Register on http://3.8.242.61/ with Ten10 application email
-- [ ] Login and locate the requirements document
-- [ ] Read and document all requirements
+- [x] Register on http://3.8.242.61/ with Ten10 application email
+- [x] Login and locate the requirements document
+- [x] Read and document all requirements
+- [x] check if application has any apis
 
 ### Environment Setup (Done before starting task)
 - [x] Playwright framework already configured
@@ -132,6 +133,9 @@ PASSWORD=your-secure-password
 
 ## Test Strategy 
 
+UI Tests - Only
+Api Test - N/A - initial plan was to have api tests but checked the network activity and no api calls were beibg made. only UI tests done
+
 #### Core areas
 - Basic Calculation Tests
 - Different Interest Rates
@@ -144,7 +148,7 @@ PASSWORD=your-secure-password
 
 ## Interest Calculation Formulas
 
-Use chatGPT for the function to calculate and check these
+Used chatGPT for the function to calculate and check the interests and total expected outcomes
 ---
 
 ### Test Approach
